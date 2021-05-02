@@ -1,0 +1,21 @@
+.divider{
+    margin-top: 20px;
+}
+
+.text {
+    background-color: #FFF;
+    padding: 0 3px;
+}
+
+.containerr{
+    position: relative;
+    text-align: center;
+}
+
+.line {
+    border-top: 1px dashed #000;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    z-index: -2;
+}

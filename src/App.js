@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import TransactionBody from './components/Body/TransactionBody';
+import React from 'react';
 
-function App() {
+class App extends React.Component {
+
+state={
+  data:null,
+  loading: true,
+  default:false
+}
+   async componentDidMount() {
+    const api="https://dev.onebanc.ai/assignment.asmx/GetTransactionHistory?userId=1&recipientId=2"
+    const response= await fetch(api);
+    var data= await response.json();
+    this.setState({data:data,loading:false,default:true})
+  }
+  
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <TransactionBody loading={this.state.loading} userData={this.state.data} def={this.state.default}/>
     </div>
   );
 }
+}
+
 
 export default App;

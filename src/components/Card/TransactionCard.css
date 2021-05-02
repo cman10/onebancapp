@@ -1,0 +1,52 @@
+.card {
+    border: 1px solid lightgray;
+    width: 200px;
+    border-radius: 5px;
+    margin: 10px;
+    height: 160px;
+}
+.left{
+    float: left;
+}
+.right {
+    float:right;
+}
+
+.amount {
+    padding: 0 10px;
+    font-size: 30px;
+    text-align: start;
+    margin: 0px 5px 0px 10px;
+    float: left;
+    font-weight: 500;
+}
+
+
+.paid{
+    padding: 0 25px;
+    font-size: 13px;
+    display: -webkit-box;
+    margin: 10px 0 10px 0;
+}
+
+.transNumber {
+    margin-left: 25px;
+}
+button {
+    border-radius: 20px;
+    background: lightskyblue;
+    margin: 5px;
+}
+
+
+.accord-right {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.date {
+    padding: 10px 0 0 0;
+    margin: 0;
+    font-size: 12px;
+}
